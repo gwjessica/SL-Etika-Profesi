@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game!</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Animasi floating */
+        .float {
+            animation: floating 3s ease-in-out infinite;
+            display: inline-block;
+        }
+        @keyframes floating {
+            0%   { transform: translateY(0px); }
+            50%  { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .bitcount-prop-double-ink {
+            font-family: "Bitcount Prop Double Ink", system-ui;
+            font-optical-sizing: auto;
+            font-weight:normal;
+            color: red;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0,
+                "CRSV" 0.5,
+                "ELSH" 0,
+                "ELXP" 0,
+                "SZP1" 0,
+                "SZP2" 0,
+                "XPN1" 0,
+                "XPN2" 0,
+                "YPN1" 0,
+                "YPN2" 0;
+        }
+
+        .caveat-brush-regular {
+            font-family: "Caveat Brush", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .jua-regular {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Caveat+Brush&family=Jua&display=swap" rel="stylesheet">
+
+</head>
+<body class="w-screen h-screen p-10 flex flex-col items-center justify-center bg-[url(background.png)] bg-cover bg-fixed">
+    <div class="flex flex-col items-center justify-center w-3/5 h-1/4 float absolute -top-16">
+        <img src="judul2.png" alt="" class="bg-cover w-full">
+    </div>
+
+    <div class="w-2/3 p-5 mx-auto mt-10 absolute bottom-36">
+        <div class="grid grid-cols-2 gap-x-10 gap-y-7">
+            <div class="flex bg-[#7bc3f1] rounded-lg overflow-hidden">
+                <div class="answer flex-1 text-center text-[#7bc3f1] font-bold py-2 text-3xl cursor-pointer jua-regular">STETOSKOP</div>
+                <div class="jua-regular bg-red-500/80 w-12 text-center text-white font-bold py-2 text-3xl">20</div>
+            </div>
+    
+            <div class="flex bg-[#7bc3f1] rounded-lg overflow-hidden">
+                <div class="jua-regular answer flex-1 text-center text-[#7bc3f1] font-bold py-2 text-3xl cursor-pointer">SUNTIK</div>
+                <div class="jua-regular bg-red-500/80 w-12 text-center text-white font-bold py-2 text-3xl">18</div>
+            </div>
+    
+            <div class="flex bg-[#7bc3f1] rounded-lg overflow-hidden">
+                <div class="answer jua-regular flex-1 text-center text-[#7bc3f1] font-bold py-2 text-3xl cursor-pointer">OBAT</div>
+                <div class="jua-regular bg-red-500/80 w-12 text-center text-white font-bold py-2 text-3xl">16</div>
+            </div>
+
+            <div class="flex bg-[#7bc3f1] rounded-lg overflow-hidden">
+                <div class="answer jua-regular flex-1 text-center text-[#7bc3f1] font-bold py-2 text-3xl cursor-pointer">TERMOMETER</div>
+                <div class="bg-red-500/80 jua-regular w-12 text-center text-white font-bold py-2 text-3xl">14</div>
+            </div>
+
+            <div class="flex bg-[#7bc3f1] rounded-lg overflow-hidden">
+                <div class="answer jua-regular flex-1 text-center text-[#7bc3f1] font-bold py-2 text-3xl cursor-pointer">SARUNG TANGAN KARET</div>
+                <div class="bg-red-500/80 jua-regular w-12 text-center text-white font-bold py-2 text-3xl">12</div>
+            </div>
+
+            <div class="flex bg-[#7bc3f1] rounded-lg overflow-hidden">
+                <div class="answer flex-1 jua-regular text-center text-[#7bc3f1] font-bold py-2 text-3xl cursor-pointer">TIMBANGAN BADAN</div>
+                <div class="bg-red-500/80 jua-regular w-12 text-center text-white font-bold py-2 text-3xl">10</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+
+
+    $('.answer').click(function showAns() {
+        $(this).addClass('text-indigo-900 transition duration-300')
+        $(this).removeClass('text-[#7bc3f1]')
+    })
+
+</script>
+</html>
